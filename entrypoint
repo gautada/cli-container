@@ -1,0 +1,7 @@
+#!/bin/sh
+
+/usr/sbin/smbd -D
+/usr/sbin/sshd -ef /etc/ssh/sshd_config
+CMD="$@"
+echo $CMD
+exec $CMD
